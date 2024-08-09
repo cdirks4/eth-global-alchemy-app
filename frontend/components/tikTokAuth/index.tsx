@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect } from "react";
 
-const CLIENT_KEY = "sbawdipoxymdg82mw9";
-const REDIRECT_URI = "localhost:3000/callback";
+const CLIENT_KEY = ENV
+const REDIRECT_URI = ENV
 
 export default function TikTokAuth() {
   useEffect(() => {
