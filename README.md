@@ -1,32 +1,33 @@
-TikTok Clippers & Content Creators Connect
-Overview
-TikTok Clippers & Content Creators Connect is a web application designed to bridge the gap between TikTok content creators and clip creators (clippers). This platform allows content creators to create bounties for specific clips they want from their content, and clip creators can browse these bounties, submit their best TikTok clips, and get rewarded for their work.
+# TikTok Clippers & Content Creators Connect
 
-Features
-Wallet & TikTok Integration: Users can securely connect their crypto wallet and TikTok account to interact with the platform.
-Role Selection: Users can choose whether they want to participate as a content creator or a clip creator.
-Profile Setup: Tailored profile creation for both content creators and clip creators.
-Bounty Creation: Content creators can create bounties with specific clip requirements and reward amounts.
-Bounty Browsing & Submission: Clip creators can browse active bounties, select those they are interested in, and submit their TikTok clips for approval.
-Clip Approval: Content creators can review submitted clips and approve or reject them.
-Flow
-Landing Page:
+## Overview
+**TikTok Clippers & Content Creators Connect** is a web application designed to bridge the gap between TikTok content creators and clip creators (clippers). This platform allows content creators to create bounties for specific clips they want from their content, and clip creators can browse these bounties, submit their best TikTok clips, and get rewarded for their work.
 
-Users are introduced to the app and prompted to connect their wallet and TikTok account.
-Users choose to proceed as either a content creator or a clip creator.
-Profile Setup:
+## Features
+- **Wallet & TikTok Integration**: Users can securely connect their crypto wallet and TikTok account to interact with the platform.
+- **Role Selection**: Users can choose whether they want to participate as a content creator or a clip creator.
+- **Profile Setup**: Tailored profile creation for both content creators and clip creators.
+- **Bounty Creation**: Content creators can create bounties with specific clip requirements and reward amounts.
+- **Bounty Browsing & Submission**: Clip creators can browse active bounties, select those they are interested in, and submit their TikTok clips for approval.
+- **Clip Approval**: Content creators can review submitted clips and approve or reject them.
 
-Content Creators: Redirected to /content-profile to set up their profile.
-Clip Creators: Redirected to /clipper-profile to set up their profile.
-Content Creator Actions:
+## Flow
 
-After setting up their profile, content creators are redirected to /create-bounties where they can create new bounties for the clips they need.
-They can also manage and review submissions for their bounties.
-Clip Creator Actions:
+### Landing Page:
+- Users are introduced to the app and prompted to connect their wallet and TikTok account.
+- Users choose to proceed as either a content creator or a clip creator.
 
-After setting up their profile, clip creators are redirected to /active-bounties where they can view all active bounties.
-They can submit their TikTok clips to the bounties they are interested in.
-Post-Submission:
+### Profile Setup:
+- **Content Creators**: Redirected to `/content-profile` to set up their profile.
+- **Clip Creators**: Redirected to `/clipper-profile` to set up their profile.
+
+### Content Creator Actions:
+- After setting up their profile, content creators are redirected to `/create-bounties` where they can create new bounties for the clips they need.
+- They can also manage and review submissions for their bounties.
+
+### Clip Creator Actions:
+- After setting up their profile, clip creators are redirected to `/active-bounties` where they can view all active bounties.
+- They can submit their TikTok clips to the bounties they are interested in.
 
 Clip creators receive feedback on their submissions, and content creators manage the approval process.
 ![IMG_1882](https://github.com/user-attachments/assets/ecbfbce5-35ef-46c3-a583-a1c35fd5ee45)
