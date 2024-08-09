@@ -29,7 +29,12 @@
 - After setting up their profile, clip creators are redirected to `/active-bounties` where they can view all active bounties.
 - They can submit their TikTok clips to the bounties they are interested in.
 
+
+### Bounty Details & Submission (`/bounties/[id]`):
+- **Clip Creators**: Can visit a specific bounty page at `/bounties/[id]` to view details and submit their TikTok clip directly to that bounty.
+- **Content Creators**: Can access the submissions for a specific bounty at `/bounties/[id]`, review the clips, and either approve or reject them.
 Clip creators receive feedback on their submissions, and content creators manage the approval process.
+
 ![IMG_1882](https://github.com/user-attachments/assets/ecbfbce5-35ef-46c3-a583-a1c35fd5ee45)
 ![IMG_1884_(copy)](https://github.com/user-attachments/assets/40f19e11-6d00-46d0-a5ea-bcfed4481001)
 ![IMG_1885](https://github.com/user-attachments/assets/745a1697-8c85-4835-8507-f8631ebbb38a)
