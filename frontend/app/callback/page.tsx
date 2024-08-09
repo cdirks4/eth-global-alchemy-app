@@ -12,10 +12,11 @@ function Callback() {
     if (code) {
       // Exchange the code for an access token
       axios
-        .post("/api/tiktok-auth", { code })
+        .post("/api/auth", { code })
         .then((response) => {
+          console.log("TikTok authentication successful", response.data);
           // Handle success (e.g., navigate to a dashboard)
-          router.push("/dashboard");
+          // router.push("/dashboard");
         })
         .catch((error) => {
           // Handle error
