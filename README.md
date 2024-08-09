@@ -35,6 +35,9 @@
 - **Content Creators**: Can access the submissions for a specific bounty at `/bounties/[id]`, review the clips, and either approve or reject them.
 Clip creators receive feedback on their submissions, and content creators manage the approval process.
 
+### User Profile Viewing (`/profile/[id]`):
+- **Clip Creators**: Can visit `/profile/[id]` to view the account details of content creators. This page will provide information about the content creator, including their linked accounts and any relevant profile details, helping clippers understand who they are working with.
+  
 ![IMG_1882](https://github.com/user-attachments/assets/ecbfbce5-35ef-46c3-a583-a1c35fd5ee45)
 ![IMG_1884_(copy)](https://github.com/user-attachments/assets/40f19e11-6d00-46d0-a5ea-bcfed4481001)
 ![IMG_1885](https://github.com/user-attachments/assets/745a1697-8c85-4835-8507-f8631ebbb38a)
