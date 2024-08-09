@@ -53,6 +53,8 @@ Clip creators receive feedback on their submissions, and content creators manage
 ## User Discover
 - https://www.reddit.com/r/Twitch/comments/1bzb0qj/where_do_streamers_look_for_editorsclippers/
 - https://www.tiktok.com/t/ZTNpu66pB/
+
+## Possible ERD/Brainstorm
 ![IMG_1882](https://github.com/user-attachments/assets/ecbfbce5-35ef-46c3-a583-a1c35fd5ee45)
 ![IMG_1884_(copy)](https://github.com/user-attachments/assets/40f19e11-6d00-46d0-a5ea-bcfed4481001)
 ![IMG_1885](https://github.com/user-attachments/assets/745a1697-8c85-4835-8507-f8631ebbb38a)
