@@ -45,7 +45,7 @@ Clip creators receive feedback on their submissions, and content creators manage
 - **Automated Reward Distribution**: Once the expiration time is reached, the smart contract automatically checks which clip has the most views and distributes the reward to the creator of that clip.
 
 ### Bounty Lifecycle
-1. **Creation**: Content creators set up a bounty with specific requirements (e.g., clip content, expiration time) and the reward amount. This information is encoded into a smart contract.
+1. **Creation**: Content creators set up a bounty with specific requirements (e.g., clip content(e.g from video[id], from stream[id], expiration time) and the reward amount. This information is encoded into a smart contract.
 2. **Submission**: Clip creators browse active bounties and submit their TikTok clips that meet the specified criteria.
 3. **Evaluation**: The submitted clips are tracked for their view count. The clip with the highest view count at the expiration time wins the bounty.
 4. **Completion**: Once the expiration time is reached, the smart contract automatically evaluates all submissions. The reward is distributed to the creator of the clip with the highest view count.
