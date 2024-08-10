@@ -15,6 +15,7 @@ import {
 
 // Choose which chains you'd like to show
 const chains = [polygonMumbai]; //, polygon, mainnet, optimism, arbitrum];
+import "./globals.css";
 
 export default function RootLayout({ children }) {
   const config = createConfig(
@@ -33,7 +34,19 @@ export default function RootLayout({ children }) {
     })
   );
 
-  const queryClient = new QueryClient();
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        // Default options for queries
+        staleTime: 1000 * 60 * 5, // 5 minutes
+        refetchOnWindowFocus: false,
+      },
+      mutations: {
+        // Default options for mutations
+        retry: 1, // Retry failed mutations once
+      },
+    },
+  });
 
   return (
     <html lang="en">
@@ -42,15 +55,8 @@ export default function RootLayout({ children }) {
           <ConnectKitProvider mode="dark">
             <body>
               <Toaster position="bottom-right" />
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  minHeight: "105vh",
-                }}
-              >
-                <div style={{ flexGrow: 1 }}>{children}</div>
-              </div>
+
+              <div style={{ flexGrow: 1 }}>{children}</div>
             </body>
           </ConnectKitProvider>
         </QueryClientProvider>
