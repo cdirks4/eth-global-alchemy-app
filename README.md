@@ -1,6 +1,7 @@
 # TikTok Clippers & Content Creators Connect
 
 ## Overview
+Ran out of time rip.
 **TikTok Clippers & Content Creators Connect** is a web application designed to bridge the gap between TikTok content creators and clip creators (clippers). This platform allows content creators to create bounties for specific clips they want from their content, and clip creators can browse these bounties, submit their best TikTok clips, and get rewarded for their work.
 
 ## Features
