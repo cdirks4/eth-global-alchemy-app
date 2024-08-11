@@ -1,5 +1,8 @@
+"use client";
 import "../../app/globals.css";
+import { useRouter } from "next/navigation";
 export default function LandingPage() {
+  const router = useRouter();
   return (
     <div className="min-h-screen flex flex-col bg-gray-900 text-white ">
       {/* Header */}
@@ -8,7 +11,10 @@ export default function LandingPage() {
           <h1 className="text-3xl font-bold">
             TikTok Clippers & Content Creators Connect
           </h1>
-          <button className="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded">
+          <button
+            className="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded"
+            onClick={() => router.push("/api/auth")}
+          >
             Connect Wallet & TikTok
           </button>
         </div>

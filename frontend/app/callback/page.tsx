@@ -8,32 +8,28 @@ import { useMutation } from "@tanstack/react-query";
 function Callback() {
   const router = useRouter();
   const [hasMutated, setHasMutated] = useState(false); // Track if the mutation has been triggered
-
-  // Define the mutation using useMutation
   const exchangeCodeMutation = useMutation({
     mutationFn: (code) => axios.post("/api/auth", { code }),
     onSuccess: (data) => {
-      console.log("TikTok authentication successful", data);
       router.push("/bounties");
     },
     onError: (error) => {
       console.error("Error during TikTok authentication", error);
+      alert(`Error during TikTok authentication ${error}`);
+      router.push("/");
     },
   });
-
   useEffect(() => {
     if (!hasMutated) {
       const params = new URLSearchParams(window.location.search);
       const code = params.get("code");
 
       if (code) {
-        // Trigger the mutation with the code
         exchangeCodeMutation.mutate(code);
-        setHasMutated(true); // Prevent future mutations
+        setHasMutated(true);
       }
     }
   }, [hasMutated, exchangeCodeMutation]);
-
   return (
     <div className="min-h-screen flex flex-col bg-gray-900 text-white">
       {/* Header */}

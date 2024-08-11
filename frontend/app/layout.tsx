@@ -53,9 +53,8 @@ export default function RootLayout({ children }) {
       <WagmiProvider config={config}>
         <QueryClientProvider client={queryClient}>
           <ConnectKitProvider mode="dark">
-            <body>
+            <body className="bg-gray-800">
               <Toaster position="bottom-right" />
-
               <div style={{ flexGrow: 1 }}>{children}</div>
             </body>
           </ConnectKitProvider>

@@ -63,26 +63,48 @@ export async function POST(req: NextRequest) {
 
     const tokenData = await response.json();
     const { access_token } = tokenData;
+    console.log(tokenData);
+    // const userInfoResponse = await fetch(
+    //   "https://open.tiktokapis.com/v2/user/info/?fields=open_id,union_id,avatar_url,display_name",
+    //   {
+    //     method: "GET",
+    //     headers: {
+    //       Authorization: `Bearer ${access_token}`,
+    //     },
+    //   }
+    // );
 
-    const userInfoResponse = await fetch(
-      "https://open.tiktokapis.com/v2/user/info/?fields=open_id,union_id,avatar_url,display_name",
+    // if (!userInfoResponse.ok) {
+    //   return NextResponse.json(
+    //     { error: "Failed to fetch user info" },
+    //     { status: userInfoResponse.status }
+    //   );
+    // }
+
+    // const userInfo = await userInfoResponse.json();
+    // console.log(userInfo);
+    const videoInfoResponse = await fetch(
+      `https://open.tiktokapis.com/v2/video/list/`,
       {
-        method: "GET",
+        method: "POST",
         headers: {
           Authorization: `Bearer ${access_token}`,
         },
+        body: JSON.stringify({ max_count: 10 }),
       }
     );
-
-    if (!userInfoResponse.ok) {
+    const videoInfo = await videoInfoResponse.json();
+    // const totalViews = videoInfo.data.item_list[0]?.statistics?.play_count || 0;
+    console.log(videoInfo);
+    console.log(videoInfoResponse);
+    if (!videoInfoResponse.ok) {
+      console.log("Failed to fetch video information");
       return NextResponse.json(
-        { error: "Failed to fetch user info" },
-        { status: userInfoResponse.status }
+        { error: "Failed to fetch video information" },
+        { status: videoInfoResponse.status }
       );
     }
 
-    const userInfo = await userInfoResponse.json();
-    console.log(userInfo);
     return NextResponse.json(userInfo, { status: 200 });
   } catch (error) {
     return NextResponse.json(
